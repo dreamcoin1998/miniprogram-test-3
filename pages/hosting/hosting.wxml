@@ -1,0 +1,27 @@
+<view class="page" style="{{ pageStyle }}">
+    <view class="page__bd">
+      <wux-filterbar items="{{ items }}" bind:change="onChange" bind:open="onOpen" bind:close="onClose" />
+      <wux-cascader visible="{{ visible }}" default-value="{{ value2 }}" title="选择地区" options="{{ options }}" bind:close="onClose1" bind:change="onChange1" />
+    </view>
+    <swiper class="screen-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+      <swiper-item wx:for="{{swiperList}}" wx:key>
+        <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+        <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>
+      </swiper-item>
+    </swiper>
+    <image class='image' src='{{tubiao}}'></image>
+    <view class='bg-white'>
+      <wux-media thumb="{{imagePath}}" thumbStyle='height: 150rpx' title="南华大学托管委员会" label="">
+        <view>
+          <image src='../images/star.png' style='height:35rpx; width:35rpx;'></image>
+          <image src='../images/star.png' style='height:35rpx; width:35rpx;'></image>
+          <image src='../images/star.png' style='height:35rpx; width:35rpx;'></image>
+          <image src='../images/star.png' style='height:35rpx; width:35rpx;'></image>
+          <image src='../images/star.png' style='height:35rpx; width:35rpx;'></image>
+          <text class="text-orange" style='font-size: 35rpx'> 5.0</text>
+        </view>
+        <text class="text-black" style='float: right;font-size: 35rpx'>0.98km</text>
+        <text class="icon-location text-gray">湖南省衡阳市蒸湘区南华大学</text>
+      </wux-media>
+    </view>
+</view>

@@ -1,14 +1,27 @@
 {
   "pages": [
     "pages/homepage/homepage",
-    "pages/user/user",
-    "pages/findjob/findjob"
+    "pages/findjob/findjob",
+    "pages/index/index",
+    "pages/hosting/hosting",
+    "pages/community/community",
+    "pages/service/service",
+    "pages/baby/baby",
+    "pages/coupon/coupon",
+    "pages/order/order",
+    "pages/recruitment/recruitment",
+    "pages/ticket/ticket",
+    "pages/postbaby/postbaby"
   ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "位置信息仅用于展示您所在地区的商家信息，否则将无法为您服务。"
+    }
+  },
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#FFFF00",
-    "navigationBarTitleText": "爱心托管",
-    "navigationStyle": "custom",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "类教",
     "navigationBarTextStyle": "black"
   },
   "usingComponents": {
@@ -18,22 +31,29 @@
     "list": [
       {
         "pagePath": "pages/homepage/homepage",
-        "text": "找托管",
+        "text": "首页",
         "iconPath": "pages/images/home.png",
         "selectedIconPath": "pages/images/home1.png"
       },
       {
-        "pagePath": "pages/findjob/findjob",
-        "text": "找工作",
-        "iconPath": "pages/images/job.png",
-        "selectedIconPath": "pages/images/job1.png"
+        "pagePath": "pages/community/community",
+        "text": "社群",
+        "iconPath": "pages/images/shequn.png",
+        "selectedIconPath": "pages/images/shequn1.png"
       },
       {
-        "pagePath": "pages/user/user",
+        "pagePath": "pages/index/index",
         "text": "我的",
         "iconPath": "pages/images/user.png",
         "selectedIconPath": "pages/images/user1.png"
       }
     ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "networkTimeout": {
+    "request": 1000000,
+    "connectSocket": 100000,
+    "uploadFile": 100000,
+    "downloadFile": 100000
   }
 }

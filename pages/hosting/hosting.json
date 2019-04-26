@@ -1,0 +1,18 @@
+{
+  "usingComponents": {
+    "wux-filterbar": "../../dist/filterbar/index",
+    "wux-cell-group": "../../dist/cell-group/index",
+    "wux-cell": "../../dist/cell/index",
+    "wux-cascader": "../../dist/cascader/index",
+    "wux-icon": "../../dist/icon/index",
+    "wux-grids": "../../dist/grids/index",
+    "wux-grid": "../../dist/grid/index",
+    "wux-search-bar": "../../dist/search-bar/index",
+    "wux-prompt": "../../dist/prompt/index",
+    "wux-media": "../../dist/media/index",
+    "wux-divider": "../../dist/divider/index",
+    "wux-rater": "../../dist/rater/index"
+  },
+  "navigationBarTitleText": "找托管",
+  "enablePullDownRefresh": true
+}

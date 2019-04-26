@@ -1,4 +1,82 @@
-<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
-	<view slot="backText">返回</view>
-	<view slot="content">导航栏</view>
-</cu-custom>
+<view class="cu-bar search bg-white">
+  <view class="cu-avatar round" style="background-image:url({{touxiang}});"></view>
+  <view class="search-form round">
+    <text class="icon-search"></text>
+    <input type="text" placeholder="请输入店铺名称" confirm-type="search"></input>
+  </view>
+  <view class="action" bindtap='dakai' wx:if="{{city!='重新定位'}}">
+    <text>{{city}}</text>
+    <text class="icon-triangledownfill"></text>
+  </view>
+  <view class="action" bindtap='openSetting' wx:else>
+    <text>授权位置信息</text>
+    <text class="icon-triangledownfill"></text>
+  </view>
+</view>
+
+<wux-grids>
+  <wux-grid thumb="/pages/images/job.png" label="找工作" bind:click='turn_jog'/>
+  <wux-grid thumb="/pages/images/tuoguan.png" label="找托管" bind:click='turn_hosting'/>
+  <wux-grid thumb="/pages/images/coupon.png" label="领券中心" bind:click='turn_coupon'/>
+</wux-grids>
+
+<swiper class="screen-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+  <swiper-item wx:for="{{swiperList}}" wx:key>
+    <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+    <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>
+  </swiper-item>
+</swiper>
+
+<view class="cu-bar bg-white solid-bottom ">
+  <view class='action'>
+    <text class='icon-titles text-orange '></text> 热门推荐
+  </view>
+  <view class='action' bindtap='turn_jog'>
+    <text class='text-orange' style='flaot: right'>更多 >></text>
+  </view>
+</view>
+<view class="cu-card article">
+  <view class="cu-item shadow">
+    <view class='bg-white'>
+      <wux-media thumb="{{imagePath}}" thumbStyle='height: 150rpx' title="南华大学托管委员会" label="">
+        <view>
+          <image src='../images/star.png' style='height:35rpx; width:35rpx;'></image>
+          <image src='../images/star.png' style='height:35rpx; width:35rpx;'></image>
+          <image src='../images/star.png' style='height:35rpx; width:35rpx;'></image>
+          <image src='../images/star.png' style='height:35rpx; width:35rpx;'></image>
+          <image src='../images/star.png' style='height:35rpx; width:35rpx;'></image>
+          <text class="text-orange" style='font-size: 35rpx'> 5.0</text>
+        </view>
+        <text class="text-black" style='float: right;font-size: 35rpx'>0.98km</text>
+        <text class="icon-location text-gray">湖南省衡阳市蒸湘区南华大学</text>
+      </wux-media>
+    </view>
+  </view>
+</view>
+
+<view class="cu-bar bg-white solid-bottom">
+  <view class='action'>
+    <text class='icon-titles text-orange '></text> 猜你喜欢
+  </view>
+  <view class='action' bindtap='turn_hosting'>
+    <text class='text-orange' style='flaot: right'>更多 >></text>
+  </view>
+</view>
+<view class="cu-card article">
+  <view class="cu-item shadow">
+    <view class='bg-white'>
+      <wux-media thumb="{{imagePath}}" thumbStyle='height: 150rpx' title="南华大学托管委员会" label="">
+        <view>
+          <image src='../images/star.png' style='height:35rpx; width:35rpx;'></image>
+          <image src='../images/star.png' style='height:35rpx; width:35rpx;'></image>
+          <image src='../images/star.png' style='height:35rpx; width:35rpx;'></image>
+          <image src='../images/star.png' style='height:35rpx; width:35rpx;'></image>
+          <image src='../images/star.png' style='height:35rpx; width:35rpx;'></image>
+          <text class="text-orange" style='font-size: 35rpx'> 5.0</text>
+        </view>
+        <text class="text-black" style='float: right;font-size: 35rpx'>0.98km</text>
+        <text class="icon-location text-gray">湖南省衡阳市蒸湘区南华大学</text>
+      </wux-media>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,28 @@
+<view class="cu-bar search bg-white">
+  <view class="action" bindtap='dakai' wx:if="{{city!='重新定位'}}">
+    <text>{{city}}</text>
+    <text class="icon-triangledownfill"></text>
+  </view>
+  <view class="action" bindtap='openSetting' wx:else>
+    <text>授权位置信息</text>
+    <text class="icon-triangledownfill"></text>
+  </view>
+  <view class="search-form round">
+    <text class="icon-search"></text>
+    <input type="text" placeholder="搜索职位信息" confirm-type="search"></input>
+  </view>
+</view>
+<view class="page" style="{{ pageStyle }}">
+    <view class="page__bd">
+        <wux-filterbar items="{{ items }}" bind:change="onChange" bind:open="onOpen" bind:close="onClose" />
+        <wux-cascader visible="{{ visible }}" default-value="{{ value2 }}" title="选择地区" options="{{ options }}" bind:close="onClose1" bind:change="onChange1" />
+        <view class='bg-white' wx:for='{{job}}' wx:key>
+          <wux-media thumb="{{thumb}}{{item.image}}" thumbStyle='height: 150rpx' title="{{item.position}}" label="{{item.description}}">
+            <text class="text-red" style='float: right;font-size: 35rpx'>{{item.price}}/月\n</text>
+            <text class="icon-location text-gray">{{item.address}}</text>
+          </wux-media>
+        </view>
+    </view>
+</view>
+  <image class='image' src='../images/jianzhi.jpg'>
+</image>

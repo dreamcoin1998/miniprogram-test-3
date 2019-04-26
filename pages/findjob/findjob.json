@@ -1,3 +1,13 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "wux-filterbar": "../../dist/filterbar/index",
+    "wux-cell": "../../dist/cell/index",
+    "wux-cascader": "../../dist/cascader/index",
+    "wux-media": "../../dist/media/index",
+    "wux-divider": "../../dist/divider/index",
+    "wux-cell-group": "../../dist/cell-group/index",
+    "wux-rater": "../../dist/rater/index"
+  },
+  "navigationBarTitleText": "找工作",
+  "enablePullDownRefresh": true
 }

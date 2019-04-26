@@ -1,0 +1,26 @@
+<view class="cu-bar bg-white solid-bottom ">
+  <cover-view><cover-image class='image' src='{{shequn}}'></cover-image></cover-view>
+</view>
+<view class="cu-bar bg-white solid-bottom ">
+  <view class='action'>
+    <text class='icon-calendar text-orange '></text> 发布历史
+  </view>
+  <view class='action' bindtap=''>
+    <text class='text-orange' style='flaot: right'> >></text>
+  </view>
+</view>
+<view class="bg-gray padding">
+  <view class="grid col-2 grid-square">
+    <view>
+      <image class='zhuti' src='https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg'></image>
+    </view>
+    <view>
+      <image class='zhuti2' src='https://ossweb-img.qq.com/images/lol/web201310/skin/big10002.jpg'></image>
+    </view>
+  </view>
+</view>
+<view class="bg-white padding">
+  <view class="grid col-2 grid-square">
+    <view class="bg-img" wx:for="{{2}}" wx:key style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big1000{{index+1}}.jpg);"></view>
+  </view>
+</view>

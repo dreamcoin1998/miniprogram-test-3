@@ -1,0 +1,16 @@
+.image{
+  height: 300rpx;
+  width: 100%
+}
+
+.zhuti2{
+  height: 250rpx;
+  width: 250rpx;
+  float: right;
+}
+
+.zhuti{
+  height: 250rpx;
+  width: 250rpx;
+  float: left;
+}

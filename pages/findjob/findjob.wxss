@@ -1,1 +1,6 @@
-/* pages/findjob/findjob.wxss */
+.image{
+  position: absolute;
+  height: 300rpx;
+  bottom: 0;
+  width: 100%
+}
